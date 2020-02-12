@@ -8,14 +8,14 @@ var config = require('./lib/config');
 var handlers = require('./lib/handlers');
 var helpers = require('./lib/helpers');
 
-//TEST 
-_data.create ('test','newFile',{'foo':'bar'},function(error){
-    if(error)console.log('this was the error',error);
-}); 
-//TEST 
-_data.delete('test','newFile',(error)=>{
-    if(error)console.log('this is the error : ' + error);
-});
+// TEST 
+// _data.create ('test','newFile',{'foo':'bar'},function(error){
+//     if(error)console.log('this was the error',error);
+// }); 
+// // TEST 
+// _data.delete('test','newFile',(error)=>{
+//     if(error)console.log('this is the error : ' + error);
+// });
 
 /* // READ OPERATION
 _data.read('test','newFile',(error,data)=>
@@ -111,5 +111,6 @@ httpsServer.listen(config.httpsPort,function(){
 //Define a router
 var router = {
    'sample' : handlers.sample,
-   'users' : handlers.users
+   'users' : handlers.users,
+   'tokens' : handlers.tokens
 };
